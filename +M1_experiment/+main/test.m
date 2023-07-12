@@ -1,7 +1,7 @@
 %% 事前準備
 clear;
 ListenChar(2);
-stimulisize = 40; 
+stimulisize =20; 
 %% input file open
 %change type_num and name 
 type = [("gloss"),("moist"),("beautiful"),("luxury")];
@@ -35,8 +35,7 @@ result = zeros(stimulisize,2);
 %r = readtable('/home/nagailab/ドキュメント/r.csv');
 %g = readtable('/home/nagailab/ドキュメント/g.csv');
 %b = readtable('/home/nagailab/ドキュメント/b.csv');
-
-stimulisize = 40;    % 試行回数設定    :   600
+  % 試行回数設定    :   600
 stimuli_len = 20;
 gray = [128 128 128];
 black = [0 0 0];
@@ -51,7 +50,7 @@ leftKey = KbName('a');
 rect_color = [255 255 255];
 %refreshrate = 60;
 
-%load('/home/nagailab/ドキュメント/nakajima/parameta.mat')
+load('/home/nakajima/ドキュメント/研究室/研究データ/M1実験/image_list.mat');
 
 
 
@@ -61,8 +60,8 @@ rect_color = [255 255 255];
 % time of image
 %exp_time.before = 1/refreshrate *2;
 exp_time.first = 1.2;
-exp_time.present = [1.0,0.15,0.1];%0.5
-exp_time.blank = [1.0,1.85,1.9];
+exp_time.present = [1.0,0.15,0.066];%0.5
+exp_time.blank = [1.0,1.85,1.934];
 img_no = 20;
 %% PTBウインドウを開く
 %Screen('Preference', 'SkipSyncTests', 1);
@@ -135,7 +134,7 @@ for i = 1:stimulisize
         %ip = 2;%left
     %end
     %imName1 = ['/home/nagailab/ドキュメント/nakajima/stimuli/' num2str(order(i)) '.jpeg'];
-    imName1 = ['/home/nakajima/ドキュメント/研究室/研究データ/stimuli/' num2str(order1(i)) '.jpeg'];
+    imName1 = ['/home/nakajima/ドキュメント/研究室/研究データ/stimuli/' num2str(use_image_ID(order1(i))) '.jpeg'];
     imdata1 = imread(imName1);    
     fprintf(fileID,'%d, ',order1(i));    
     
