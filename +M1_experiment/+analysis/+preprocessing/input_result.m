@@ -7,6 +7,7 @@ function new_EEG = input_result(EEG,result)
             EEG.event(epoch_num).ans = result(event_num,2);
             EEG.event(epoch_num).prestime = result(event_num,3);
             event_bin = [event_bin num2str(result(event_num,2))];
+            event_bin = [event_bin num2str(result(event_num,3))];
             EEG.event(epoch_num).type = ['S  ' event_bin];
             event_num = event_num + 1;
         end

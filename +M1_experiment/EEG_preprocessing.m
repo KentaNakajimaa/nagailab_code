@@ -8,7 +8,7 @@ clear;
 close all
 
 home_path  = '/home/nakajima/ドキュメント/研究室/研究データ/M1実験/本実験/'; % path on server
-subjects = {'dogu'};
+subjects = {'hanada','takanashi'};
 type = {'gloss', 'beautiful'};
 ex_cnt = 4;
 cd(home_path)
@@ -21,7 +21,7 @@ clear;
 close all
 
 home_path  = '/home/nakajima/ドキュメント/研究室/研究データ/M1実験/本実験/';
-subjects = {'dogu'};
+subjects = {'hanada','takanashi'};
 type = {'gloss', 'beautiful'};
 ex_cnt = 4;
 cd(home_path)
@@ -36,10 +36,10 @@ clear
 close all
 
 home_path  = '/home/nakajima/ドキュメント/研究室/研究データ/M1実験/本実験/';
-subjects = {'dogu'};
+subjects = {'hanada','takanashi'};
 type = {'gloss', 'beautiful'};
 ex_cnt = 4;
-cd(home_path)
+cd(home_path);
 
 M1_experiment.analysis.preprocessing.EEG_preprocessing_af_detect(home_path,subjects,type,ex_cnt);
 
@@ -49,7 +49,7 @@ clear
 close all
 
 home_path  = '/home/nakajima/ドキュメント/研究室/研究データ/M1実験/本実験/';
-subjects = {'dogu'};
+subjects = {'hanada','takanashi'};
 type = {'gloss', 'beautiful'};
 ex_cnt = 4;
 cd(home_path)

@@ -22,7 +22,7 @@ function EEG_preprocessing_af_detect(home_path,subjects,ex_type,ex_num)
                 EEG = eeg_checkset( EEG );
                 % Identifies noisy channels (flag 1 4)
                 threshold = 120;
-                EEG = pop_artmwppth( EEG , 'Channel',  1:30, 'Flag', [1 4], 'Review', 'off', 'Threshold',  threshold, 'Twindow', [0  1500.0], 'Windowsize',  200, 'Windowstep',  50 );
+                EEG = pop_artmwppth( EEG , 'Channel',  1:27, 'Flag', [1 4], 'Review', 'off', 'Threshold',  threshold, 'Twindow', [0  1500.0], 'Windowsize',  200, 'Windowstep',  50 );
         
                 % Artifact detection. Step-like artifacts in the bipolar
                 % HEOG channel (channel 73, created earlier with Channel Operations)
