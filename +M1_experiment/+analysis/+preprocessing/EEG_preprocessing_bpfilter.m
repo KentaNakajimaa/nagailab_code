@@ -3,8 +3,8 @@ function EEG_preprocessing_bpfilter(home_path,subjects,ex_type,ex_num)
     for subj = 1:length(subjects)
         for type_id = 1:length(ex_type)
             for iter = 1:ex_num
-                data_path = [home_path '/' subjects{subj} '/'];
-                output_path  = [home_path '/ex_' ex_type{type_id} '/']; % path where data is saved
+                data_path = [home_path 'subjects/' subjects{subj} '/'];
+                output_path  = [home_path 'ex_' ex_type{type_id} '/']; % path where data is saved
                 cd(data_path)
             
                 % Step 1: Import file, downsample(or not), bandpass filter(or not), and save as EEG set file
@@ -20,8 +20,8 @@ function EEG_preprocessing_bpfilter(home_path,subjects,ex_type,ex_num)
                     EEG = eeg_checkset( EEG );
                     %EEG = pop_basicfilter( EEG,  1:32 , 'Cutoff',  50, 'Design', 'notch', 'Filter', 'PMnotch', 'Order',  180 ); % GUI: 08-Nov-2022 09:22:55
                     %EEG = eeg_checkset( EEG );
-                    EEG = pop_reref( EEG, []);%rereference
-                    EEG = eeg_checkset( EEG );
+                    %EEG = pop_reref( EEG, []);%rereference
+                    %EEG = eeg_checkset( EEG );
                     EEG.setname = [ex_type{type_id} '_' subjects{subj} '_' num2str(iter) '_bpfilt'];
                     EEG = pop_saveset( EEG, 'filename',EEG.setname,'filepath',output_path);
                 else

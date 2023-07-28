@@ -8,7 +8,7 @@ clear;
 close all
 
 home_path  = '/home/nakajima/ドキュメント/研究室/研究データ/M1実験/本実験/'; % path on server
-subjects = {'hanada','takanashi'};
+subjects = {'kinoshita'};
 type = {'gloss', 'beautiful'};
 ex_cnt = 4;
 cd(home_path)
@@ -21,7 +21,7 @@ clear;
 close all
 
 home_path  = '/home/nakajima/ドキュメント/研究室/研究データ/M1実験/本実験/';
-subjects = {'hanada','takanashi'};
+subjects = {'kinoshita'};
 type = {'gloss', 'beautiful'};
 ex_cnt = 4;
 cd(home_path)
@@ -36,7 +36,7 @@ clear
 close all
 
 home_path  = '/home/nakajima/ドキュメント/研究室/研究データ/M1実験/本実験/';
-subjects = {'hanada','takanashi'};
+subjects = {'kinoshita'};
 type = {'gloss', 'beautiful'};
 ex_cnt = 4;
 cd(home_path);
@@ -49,7 +49,7 @@ clear
 close all
 
 home_path  = '/home/nakajima/ドキュメント/研究室/研究データ/M1実験/本実験/';
-subjects = {'hanada','takanashi'};
+subjects = {'kinoshita'};
 type = {'gloss', 'beautiful'};
 ex_cnt = 4;
 cd(home_path)
